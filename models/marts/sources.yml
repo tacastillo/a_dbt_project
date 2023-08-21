@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: ingested
+    database: analytics  
+    schema: core  
+    tables:
+      - name: ingested_orders
+      - name: ingested_customers

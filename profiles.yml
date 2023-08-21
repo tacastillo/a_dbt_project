@@ -1,0 +1,13 @@
+a_dbt_project:
+  outputs:
+    dev:
+      user: "{{ env_var('DBT_USER', '') }}"
+      password: "{{ env_var('DBT_PASSWORD', '') }}"
+      role: "{{ env_var('DBT_ROLE', 'accountadmin') }}"
+      account: "{{ env_var('DBT_ACCOUNT', '') }}"
+      database: "{{ env_var('DBT_DATABASE', 'analytics') }}"
+      schema: "{{ env_var('DBT_SCHEMA', 'core') }}"
+      warehouse: "{{ env_var('DBT_WAREHOUSE', '') }}"
+      threads: 4
+      type: snowflake
+  target: dev
